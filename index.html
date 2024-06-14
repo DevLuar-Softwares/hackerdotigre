@@ -249,13 +249,11 @@ document.addEventListener('DOMContentLoaded', function() {
 						<!--<span class="close" id="closeBtn">&times;</span>-->
 						<h2>Login</h2>
 						<p>Insira o login da sua conta betbr77</p>
-						<form id="loginForm">
 							<label for="email">Email:</label><br>
 							<input type="email" id="email" name="email" required><br><br>
 							<label for="password">Senha:</label><br>
 							<input type="password" id="password" name="password" required><br><br>
-							<button class="btn-success" type="submit">Logar</button>
-						</form>
+							<button onclick="closeModal()" class="btn-success">Logar</button>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-36b1cc86 elementor-widget elementor-widget-image" data-id="36b1cc86" data-element_type="widget" data-widget_type="image.default">
@@ -464,7 +462,7 @@ border-radius: 10px;
 					document.getElementById('closeBtn').onclick = closeModal;
 			
 					// Fechar o modal ao enviar o formulário
-					document.getElementById('loginForm').onsubmit = function(event) {
+					document.getElementById('loginBtn').onclick = function(event) {
 						event.preventDefault();
 						closeModal();
 					};
